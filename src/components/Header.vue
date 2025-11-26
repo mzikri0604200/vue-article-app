@@ -74,7 +74,9 @@ const handleLogout = () => {
               <li>
                 <RouterLink :to="{ name: 'dashboard' }">Dashboard</RouterLink>
               </li>
-              <li><a>Profile</a></li>
+              <li>
+                <RouterLink :to="{ name: 'profile' }">Profile</RouterLink>
+              </li>
               <li><span class="text-error" @click="handleLogout">Logout</span></li>
             </ul>
           </div>

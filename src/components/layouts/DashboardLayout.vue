@@ -44,7 +44,21 @@ const closeDrawer = () => {
 					<h2 class="menu-title">Dashboard</h2>
 					<ul>
 						<li>
-							<RouterLink :to="{ name: 'dashboard' }">Dashboard</RouterLink>
+							<div class="flex">
+								<font-awesome-icon icon="fa-solid fas fa-dashboard" class="text-gray-400" />
+								<RouterLink :to="{ name: 'dashboard' }">Dashboard</RouterLink>
+							</div>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<h2 class="menu-title">Profile</h2>
+					<ul>
+						<li>
+							<div class="flex">
+								<font-awesome-icon icon="fa-solid fas fa-user" class="text-gray-400" />
+								<RouterLink :to="{ name: 'profile' }">Profile</RouterLink>
+							</div>
 						</li>
 					</ul>
 				</li>
@@ -78,7 +92,5 @@ const closeDrawer = () => {
 				<RouterView></RouterView>
 			</main>
 		</div>
-
 	</div>
-	<!-- <RouterView /> -->
 </template>

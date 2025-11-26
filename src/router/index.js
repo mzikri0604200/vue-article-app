@@ -6,6 +6,7 @@ import RegisterView from '@/views/RegisterView.vue'
 import DashboardLayout from '@/components/layouts/DashboardLayout.vue'
 import PublicLayout from '@/components/layouts/PublicLayout.vue'
 import DashboardView from '@/views/DashboardView.vue'
+import ProfileView from '@/views/ProfileView.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -17,6 +18,11 @@ const router = createRouter({
           path: '',
           name: 'dashboard',
           component: DashboardView,
+        },
+        {
+          path: 'profile',
+          name: 'profile',
+          component: ProfileView,
         },
       ],
     },
