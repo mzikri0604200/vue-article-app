@@ -62,6 +62,17 @@ const closeDrawer = () => {
 						</li>
 					</ul>
 				</li>
+				<li>
+					<h2 class="menu-title">Article</h2>
+					<ul>
+						<li>
+							<RouterLink :to="{ name: 'article-dashboard' }" class="flex">
+								<font-awesome-icon icon="fa-solid fa-file-lines" class="text-gray-400" />
+								<span>Article</span>
+							</RouterLink>
+						</li>
+					</ul>
+				</li>
 			</ul>
 		</div>
 

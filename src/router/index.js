@@ -9,6 +9,8 @@ import DashboardView from '@/views/DashboardView.vue'
 import ProfileView from '@/views/ProfileView.vue'
 import UpdateProfileView from '@/views/UpdateProfile.vue'
 import CreateProfileView from '@/views/CreateProfile.vue'
+import ArticleDashboard from '@/views/ArticleDashboard.vue'
+import CreateArticle from '@/views/CreateArticle.vue'
 import { useAuthStore } from '@/store/auth'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -39,6 +41,16 @@ const router = createRouter({
           path: 'profile/update',
           name: 'update-profile',
           component: UpdateProfileView,
+        },
+        {
+          path: 'article',
+          name: 'article-dashboard',
+          component: ArticleDashboard,
+        },
+        {
+          path: 'article/create',
+          name: 'create-article',
+          component: CreateArticle,
         },
       ],
     },

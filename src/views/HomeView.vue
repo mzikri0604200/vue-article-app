@@ -26,8 +26,10 @@ const { data, isLoading, error } = useQuery({
     </div>
     <section v-else>
       <h1 class="text-2xl font-bold mb-6">List of latest articles</h1>
-      <CardItem v-for="article in data?.articles" :key="article.id" :item="article" />
-      <div class="mt-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <CardItem v-for="article in data?.articles" :key="article.id" :item="article" />
+      </div>
+      <div class="mt-4 text-center">
         <button class="btn btn-warning">Show all articles</button>
       </div>
     </section>
