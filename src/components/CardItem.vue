@@ -50,9 +50,10 @@ const isArticleAuthor = computed(() => {
 			<div class="text-end flex items-center justify-between">
 				<span class="text-xs text-gray-300 italic">{{ new Date(item.created).toDateString() }}</span>
 				<div class="flex gap-2" v-if="isArticleAuthor && isDashboard">
-					<button class="btn btn-info btn-soft btn-xs">
+					<RouterLink :to="{ name: 'update-article', params: { slug: item.slug } }"
+						class="btn btn-info btn-soft btn-xs">
 						<font-awesome-icon icon="fa-solid fas fa-edit fa-lg" />
-					</button>
+					</RouterLink>
 					<button class="btn btn-error btn-soft btn-xs" @click="$emit('delete', item.slug)">
 						<font-awesome-icon icon="fa-solid fas fa-trash fa-lg" />
 					</button>

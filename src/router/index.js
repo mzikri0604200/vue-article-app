@@ -11,6 +11,7 @@ import UpdateProfileView from '@/views/UpdateProfile.vue'
 import CreateProfileView from '@/views/CreateProfile.vue'
 import ArticleDashboard from '@/views/ArticleDashboard.vue'
 import CreateArticle from '@/views/CreateArticle.vue'
+import UpdateArticle from '@/views/UpdateArticle.vue'
 import { useAuthStore } from '@/store/auth'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -51,6 +52,11 @@ const router = createRouter({
           path: 'article/create',
           name: 'create-article',
           component: CreateArticle,
+        },
+        {
+          path: 'article/update/:slug',
+          name: 'update-article',
+          component: UpdateArticle,
         },
       ],
     },
