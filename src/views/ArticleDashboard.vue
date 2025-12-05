@@ -53,7 +53,7 @@ const handleDeleteArticle = async (slug) => {
 			<font-awesome-icon icon="fa-solid fas fa-newspaper fa-lg" size="3x" class="text-gray-400 mb-3" />
 			<p class="text-sm text-gray-400">Anda belum membuat artikel apapun</p>
 		</div>
-		<div v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+		<div v-else class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
 			<CardItem v-for="article in data?.articles" :key="article.id" :item="article" :is-dashboard="true"
 				@delete="handleDeleteArticle" />
 		</div>

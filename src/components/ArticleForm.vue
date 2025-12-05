@@ -126,10 +126,6 @@ watch(() => props.data, (newData) => {
 			<legend class="fieldset-legend">{{ props.isUpdate ? 'Update Article' : 'Create Article' }}</legend>
 
 			<div class="flex gap-3 flex-col">
-				<div v-if="props.isUpdate">
-					<label class="label">Slug</label>
-					<input type="text" class="input w-full" required v-model.trim="props.data.article.slug" />
-				</div>
 				<div>
 					<label class="label">Title</label>
 					<input type="text" class="input w-full" required v-model.trim="articleData.article.title"
