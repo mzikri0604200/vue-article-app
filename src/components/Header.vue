@@ -2,6 +2,7 @@
 import { useAuthStore } from '@/store/auth';
 import { useMutation } from '@tanstack/vue-query';
 import { useRouter } from 'vue-router';
+import ThemeSelector from './ThemeSelector.vue';
 const authStore = useAuthStore()
 const router = useRouter()
 
@@ -59,7 +60,6 @@ const handleLogout = () => {
               <ul class="p-2">
                 <li><a>Submenu 1</a></li>
                 <li><a>Submenu 2</a></li>
-                <li><span class="text-error" @click="handleLogout">Logout</span></li>
               </ul>
             </details>
           </li>
@@ -67,6 +67,9 @@ const handleLogout = () => {
         </ul>
       </div>
       <div class="navbar-end">
+        <div>
+          <ThemeSelector />
+        </div>
         <div v-if="authStore.token">
           <div class="dropdown dropdown-end">
             <div tabindex="0" role="button" class="btn btn-ghost rounded-field">{{ authStore.user?.username }}</div>

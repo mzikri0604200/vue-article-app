@@ -3,6 +3,7 @@ import { ref } from 'vue';
 import { useRouter } from 'vue-router'
 import { useMutation } from '@tanstack/vue-query';
 import { useAuthStore } from '@/store/auth';
+import ThemeSelector from '@/components/ThemeSelector.vue';
 
 const authStore = useAuthStore()
 const router = useRouter()
@@ -93,7 +94,8 @@ const closeDrawer = () => {
 				<div class="flex-1 font-bold text-2xl px-2">
 					<RouterLink :to="{ name: 'home' }" class="btn btn-ghost text-xl">Public</RouterLink>
 				</div>
-				<div class="flex-none">
+				<div class="">
+					<ThemeSelector />
 					<button class="btn btn-sm text-white btn-error" @click="handleLogout">
 						Logout
 					</button>
